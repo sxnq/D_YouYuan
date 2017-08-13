@@ -1,0 +1,175 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+
+android {
+
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+
+
+    //解决。9报错
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+
+    defaultConfig {
+        applicationId "baway.com.dyouyuan.core"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+
+
+        ndk {
+            moduleName "core"
+            abiFilters "armeabi","armeabi-v7a","x86","arm64-v8a","mips","mips64","x86_64"
+
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            //jni库的调用会到资源文件夹下libs里面找so文件
+            jniLibs.srcDirs = ['libs']
+            useLibrary 'org.apache.http.legacy'
+        }
+    }
+
+
+// 据说 可以不删掉 jni libs obj
+//   sourceSets.main {
+//        jni.srcDirs = []
+//        jniLibs.srcDirs = ['libs']
+//        jniLibs.srcDir 'src/mainbs'
+//    }
+
+
+    greendao {
+        daoPackage 'baway.com.dyouyuan.dao'
+        targetGenDir 'src/main/java'
+        schemaVersion 1
+    }
+}
+
+//短信验证
+repositories{
+    flatDir{
+        dirs 'libs' //就是你放aar的目录地址
+    }
+}
+
+
+
+
+
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+
+
+    compile 'com.android.support:support-v4:26.0.0-alpha1'
+    compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
+
+
+    //butterknife
+    compile 'com.jakewharton:butterknife:8.6.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+
+//    //tablayout
+//    compile 'com.android.support:design:26.0.0-alpha1'
+//    //loopView
+//    compile 'com.idisfkj.loopview:loopview:2.0.0'
+
+    //RxJava
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.1.0'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.1.0'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-scalars:+'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    //citypicker 高仿iOS 滚轮实现 省市区 城市选择三级联动
+    compile 'liji.library.dev:citypickerview:1.1.0'
+    //    Platform bindings:
+    compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+
+//    gson
+    compile 'com.google.code.gson:gson:2.6.2'
+
+//    fastjson
+    compile 'com.alibaba:fastjson:1.1.56.android'
+
+//    klog
+    compile 'com.github.zhaokaiqiang.klog:library:1.6.0'
+
+    //6.0权限
+    compile('com.github.hotchemi:permissionsdispatcher:2.4.0') {
+        // if you don't use android.app.Fragment you can exclude support for them
+        exclude module: "support-v13"
+    }
+    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.4.0'
+
+
+    //圆角图片
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+
+    //瀑布流
+    compile 'com.yqritc:recyclerview-flexibledivider:1.4.0'
+    compile 'com.github.Aspsine:IRecyclerView:0.0.5'
+
+    //Glide
+    compile 'com.github.bumptech.glide:glide:3.5.2'
+
+//    compile 'org.xutils:xutils:3.5.0'
+
+    //    SpringView
+    compile 'com.liaoinstan.springview:library:1.2.6'
+
+    //Bugly
+    compile 'com.tencent.bugly:crashreport:2.6.5'
+    compile 'com.tencent.bugly:nativecrashreport:3.3.0'
+
+    //GreenDao
+    compile 'org.greenrobot:greendao:3.2.2'
+
+    // add library
+    compile 'net.zetetic:android-database-sqlcipher:3.5.7@aar'
+
+    //photoview
+    compile 'com.github.chrisbanes.photoview:library:1.2.4'
+
+//    imageloader
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
+    //fresco
+    compile 'com.facebook.fresco:fresco:1.3.0'
+
+    compile project(path: ':library')
+    compile project(':library')
+    compile project(':easeui')
+
+    //    compile 'com.google.android:multidex:0.1'
+
+    //Fresco  图片加载
+    compile 'com.facebook.fresco:fresco:1.3.0'
+
+    //    GestureImageView
+    compile files('libs/gesture-imageview.jar')
+
+    //七牛直播
+    compile 'com.qiniu:happy-dns:0.2.8'
+}

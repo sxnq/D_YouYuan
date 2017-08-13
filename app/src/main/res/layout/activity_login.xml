@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginactivity_id"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+
+    tools:context="baway.com.dyouyuan.activity.LoginActivity">
+
+
+    <LinearLayout
+        android:background="#28baa7"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:layout_marginTop="26dp"
+
+            android:id="@+id/loginactivity_fanhui"
+            android:src="@drawable/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+<TextView
+    android:layout_marginLeft="220dp"
+    android:id="@+id/loginactivity_zhuce"
+
+    android:layout_marginTop="26dp"
+    android:text="注册"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="#ffffff"
+    android:textSize="18sp"
+    />
+
+
+
+    </LinearLayout>
+
+
+<TextView
+    android:layout_marginTop="50dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="用户登录"
+    android:gravity="center"
+    android:textSize="20sp"
+    />
+
+
+    <EditText
+  android:layout_marginLeft="60dp"
+  android:layout_marginRight="60dp"
+        android:inputType="number"
+        android:imeOptions="actionSend"
+        android:id="@+id/loginactivity_etphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="手机号/邮箱"
+        android:layout_marginTop="30dp"
+        />
+
+    <baway.com.dyouyuan.Custom.EditTextPassword
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+
+        android:drawableRight="@mipmap/show_password_icon"
+        android:password="true"
+        android:id="@+id/loginactivity_etpwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="密码"
+        android:layout_marginTop="10dp"
+        />
+
+
+
+
+
+    <Button
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:text="登陆"
+        android:textColor="#fff"
+        android:background="@drawable/button_selector1"
+        android:id="@+id/loginactivity_btlogin"
+        android:layout_gravity="center_horizontal" />
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/loginactivity_tvphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="手机号快捷登录"
+        android:gravity="center"
+        android:textSize="20sp"
+        />
+
+
+</LinearLayout>

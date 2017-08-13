@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:background="@mipmap/welcome_bg"
+    tools:context="baway.com.dyouyuan.MainActivity">
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/mainactivity_btlogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="10dip"
+            android:gravity="center"
+            android:text="登陆"
+            android:textColor="#ffffff"
+            android:background="@drawable/mainactivity_button" />
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="注册"
+            android:textColor="#fff"
+            android:background="@drawable/button_selector1"
+            android:id="@+id/mainactivity_btregist"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

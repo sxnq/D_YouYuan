@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:background="#ffffff"
+                android:layout_height="match_parent">
+
+    <TextView android:layout_width="wrap_content"
+              android:id="@+id/voice_chat_time"
+              android:layout_centerHorizontal="true"
+              android:text="1111111"
+              android:gravity="center"
+              android:background="#cccccc"
+android:layout_alignParentTop="true"
+              android:textColor="#000000"
+              android:visibility="gone"
+              android:layout_height="wrap_content"/>
+
+
+    <LinearLayout
+        android:id="@+id/voice_you_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/voice_chat_time"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:textColor="#000000"
+            android:id="@+id/voice_you_length"
+            style="@style/chat_text_name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+          android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="3&apos;&apos;"
+        />
+
+
+
+        <RelativeLayout
+
+            android:layout_marginRight="3dp"
+android:gravity="right"
+            android:id="@+id/voice_you_voices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+android:layout_marginTop="10dp"
+            android:background="@drawable/wechatbac2" >
+
+            <ImageView
+
+                android:id="@+id/id_recorder_anim"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+              android:layout_marginRight="3dp"
+                android:layout_gravity="center_vertical|right"
+                android:src="@drawable/v_anim3" />
+        </RelativeLayout>
+
+
+
+        <!--<ImageView-->
+            <!--android:background="#ccccff"-->
+            <!--android:id="@+id/voice_you_voices"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:paddingLeft="12dp"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/ease_chatto_voice_playing" />-->
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="我" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/voice_zuo_receive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true" android:layout_toRightOf="@+id/voice_chat_time"
+        android:layout_toEndOf="@+id/voice_chat_time">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/voice_receive_touxiang"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:textColor="#000000"
+                android:id="@+id/voice_receive_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="她" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/voice_zuo_voice"
+
+                        android:gravity="left"
+
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/wechatbac1" >
+
+            <ImageView
+                android:id="@+id/voice_zuo_voice_view"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical|left"
+                android:src="@drawable/receive_voice_icon_3" android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+
+
+        </RelativeLayout>
+
+        <!--<ImageView-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:id="@+id/voice_zuo_voice"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:paddingRight="12dp"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:background="#cccccc"-->
+            <!--android:src="@drawable/ease_chatfrom_voice_playing" />-->
+
+        <TextView
+            android:textColor="#000000"
+            android:id="@+id/voice_zuo_length"
+            style="@style/chat_text_name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+      android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="3&apos;&apos;"
+            />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

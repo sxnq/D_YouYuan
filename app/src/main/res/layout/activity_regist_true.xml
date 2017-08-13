@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="#ffffff"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registactivity_id"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+
+android:clickable="true"
+    android:focusableInTouchMode="true"
+    tools:context="baway.com.dyouyuan.activity.LoginActivity"
+    >
+
+
+    <LinearLayout
+        android:background="#28baa7"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+android:layout_marginTop="26dp"
+            android:id="@+id/registtrueactivity_fanhui"
+            android:src="@drawable/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginLeft="220dp"
+            android:id="@+id/registtrueactivity_denglu"
+
+            android:layout_marginTop="30dp"
+            android:text="登陆"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="昵称"
+            />
+
+        <EditText
+            android:layout_marginLeft="20dp"
+            android:inputType="text"
+            android:imeOptions="actionSend"
+            android:id="@+id/registtrueactivity_etname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="密码"
+            />
+
+        <EditText
+            android:layout_marginLeft="20dp"
+            android:inputType="number"
+            android:imeOptions="actionSend"
+            android:id="@+id/registtrueactivity_etpwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_marginLeft="41dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="性别"
+            />
+
+        <TextView
+android:text="男"
+android:textSize="20sp"
+            android:id="@+id/registtrueactivity_tvsex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200dp"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginLeft="41dp"
+
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="年龄"
+            />
+
+        <TextView
+            android:text="20"
+            android:textSize="20sp"
+            android:id="@+id/registtrueactivity_tvage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginLeft="41dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地区"
+            />
+
+        <TextView
+            android:gravity="right"
+            android:layout_marginRight="20dp"
+            android:text="请选择"
+            android:textSize="20sp"
+            android:id="@+id/registtrueactivity_tvlocal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="41dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="简介"
+            />
+
+        <EditText
+            android:inputType="text"
+            android:imeOptions="actionSend"
+            android:hint="一句话描述自己"
+            android:gravity="center"
+            android:id="@+id/registtrueactivity_tvmine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+          android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:text="下一步"
+        android:textColor="#fff"
+        android:background="@drawable/button_selector1"
+        android:id="@+id/registtrueactivity_btlogin"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

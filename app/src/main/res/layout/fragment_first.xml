@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="#28baa7"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        >
+
+
+
+        <TextView
+            android:layout_marginLeft="238dp"
+            android:id="@+id/pub_title_title"
+
+            android:layout_marginTop="40dp"
+            android:text="切换样式"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            />
+
+
+
+    </LinearLayout>
+
+<!--<com.liaoinstan.springview.widget.SpringView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:id="@+id/springview_indexfragment"-->
+    <!--android:layout_height="match_parent">-->
+
+
+
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/recycleview_index"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+
+    <!--</android.support.v7.widget.RecyclerView>-->
+
+<!--</com.liaoinstan.springview.widget.SpringView>-->
+
+
+    <com.aspsine.irecyclerview.IRecyclerView
+        android:id="@+id/recycleview_index"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:loadMoreEnabled="true"
+        app:loadMoreFooterLayout="@layout/layout_irecyclerview_load_more_footer"
+        app:refreshEnabled="true"
+        app:refreshHeaderLayout="@layout/layout_irecyclerview_refresh_header"/>
+
+
+</LinearLayout>

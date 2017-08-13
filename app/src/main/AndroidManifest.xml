@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="baway.com.dyouyuan">
+
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!-- Mob短信验证 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <!-- 获取经纬度 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <!--七牛直播-->
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+
+    <!-- android:theme="@style/AppTheme" -->
+    <application
+        android:name=".IApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+
+        <!-- 设置环信应用的AppKey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="1131170609115540#dliao"/>
+        <!-- 声明SDK所需的service SDK核心功能 -->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true"/>
+        <service
+            android:name="com.hyphenate.chat.EMJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <!-- 声明SDK所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 通过AndroidManifest配置AppKey和AppSecret，如果你选择通过代码配置，则不需要配置以下meta-data -->
+        <meta-data
+            android:name="Mob-AppKey"
+            android:value="1f3017ab69eb2"/>
+        <meta-data
+            android:name="Mob-AppSecret"
+            android:value="3bbf8da2fffc2732c84e84bc96606e4c"/>
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Chen">
+        </activity>
+
+        <!-- @style/Theme.AppCompat -->
+
+        <!--<activity-->
+            <!--android:name=".activity.RegistActivity"-->
+            <!--android:theme="@style/Chen">-->
+        <!--</activity>-->
+        <activity
+            android:name=".activity.LoginActivity"
+            android:theme="@style/Chen"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
+        </activity>
+        <activity
+            android:name=".activity.PhoneLoginActivity"
+            android:theme="@style/Chen">
+        </activity>
+        <activity
+            android:name=".activity.PhoneRegistActivity"
+            android:theme="@style/Chen">
+        </activity>
+        <activity
+            android:name=".activity.RegistTrueActivity"
+            android:theme="@style/Chen"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
+        </activity>
+
+        <!-- Mob短信验证 -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".activity.SpalshActivityActivity"
+            android:theme="@style/Chen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.UpPhoneLoadActivity"
+            android:theme="@style/Chen">
+        </activity>
+        <activity
+            android:name=".base.IActivity"
+            android:theme="@style/Chen"/>
+        <activity
+            android:name=".activity.RadioGroupActivity"
+            android:theme="@style/Chen">
+        </activity>
+        <activity
+            android:name=".activity.XiangQingActivity"
+            android:theme="@style/Chen">
+        </activity>
+        <activity
+            android:name=".huanxinui.ChatActivity"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity android:name=".activity.CeShiActivity">
+        </activity>
+        <activity
+            android:name=".activity.VideoActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/Chen">
+        </activity>
+        <activity android:name=".activity.ImageViewActivity">
+        </activity>
+
+        <activity android:name=".zhibo.SWCameraStreamingActivity" android:theme="@android:style/Theme.NoTitleBar"
+                  android:windowSoftInputMode="adjustPan"></activity>
+        <activity android:name=".zhibo.PLVideoViewActivity"    android:theme="@android:style/Theme.NoTitleBar"
+                  android:windowSoftInputMode="adjustPan" />
+
+    </application>
+
+</manifest>

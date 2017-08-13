@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="false">
+
+
+    <RelativeLayout
+
+
+android:id="@+id/xiangqing_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        >
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+
+            <RelativeLayout
+
+
+                android:id="@+id/activity_xiang_qing"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
+                >
+
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:id="@+id/xiangqing_touxiang"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"/>
+
+                <!--@drawable/btn_back-->
+
+                <ImageView
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/zuo"
+                    android:id="@+id/xiangqing_zuoshangjiao"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+
+                <ImageView
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/you"
+                    android:id="@+id/xiangqing_youshangjiao"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+
+                <TextView
+                    android:id="@+id/xiangqing_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffff00"
+                    android:layout_marginBottom="60dp"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="30dp"
+                    android:text="ffffff"
+                    android:layout_alignBottom="@id/xiangqing_touxiang"
+                    />
+
+                <TextView
+                    android:id="@+id/xiangqing_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffff00"
+                    android:layout_marginBottom="30dp"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="30dp"
+                    android:text="ffffff"
+                    android:layout_alignBottom="@id/xiangqing_touxiang"
+                    />
+
+
+
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:id="@+id/id_gallery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+            <RadioGroup
+                android:layout_marginTop="30dp"
+                android:id="@+id/tab_radiogroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="horizontal">
+
+
+                <RadioButton
+                    android:id="@+id/xiangqing_guangzhu"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="关注"
+                    android:textColor="#999999"
+                    android:drawableTop="@drawable/xiangqing_you_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textSize="14sp"
+
+                    />
+
+
+                <RadioButton
+                    android:textColor="#999999"
+                    android:id="@+id/xiangqing_weixinqq"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="QQ/微信"
+                    android:drawableTop="@drawable/xiangqing_zuo_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textSize="14sp"
+
+                    />
+
+
+            </RadioGroup>
+
+
+
+
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <Button
+                    android:text="加好友"
+                    android:alpha="0.7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_launcher"
+                    android:id="@+id/xiangqing_addfriend"
+                    />
+
+                <Button
+                    android:id="@+id/xiangqing_tuichu"
+                    android:text="退出"
+                    android:alpha="0.7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_launcher"
+
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

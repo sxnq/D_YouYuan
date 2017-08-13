@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="#28baa7"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        >
+
+
+
+        <TextView
+            android:layout_marginLeft="200dp"
+            android:id="@+id/radiogroupactivity_qiehuanyangshi"
+            android:padding="10dp"
+            android:layout_marginTop="18dp"
+            android:text="切换样式"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            />
+
+
+
+    </LinearLayout>
+
+
+    <com.aspsine.irecyclerview.IRecyclerView
+        android:id="@+id/radiogroupactivity_recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:loadMoreEnabled="true"
+        app:loadMoreFooterLayout="@layout/layout_irecyclerview_load_more_footer"
+        app:refreshEnabled="true"
+        app:refreshHeaderLayout="@layout/layout_irecyclerview_refresh_header"/>
+
+</LinearLayout>

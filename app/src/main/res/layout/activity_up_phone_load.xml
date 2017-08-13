@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_up_phone_load"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+
+   android:orientation="vertical">
+
+    <LinearLayout
+        android:background="#28baa7"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+android:layout_marginTop="16dp"
+            android:id="@+id/upphoneload_fanhui"
+            android:src="@drawable/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/welcome_bg"
+        android:id="@+id/upphoneload_iv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+    <TextView
+        android:layout_marginLeft="119dp"
+        android:textColor="#28baa7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="请上传一张清晰的头像"
+        />
+
+
+
+    <Button
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:text="拍照"
+        android:textColor="#fff"
+        android:background="@drawable/button_selector1"
+        android:id="@+id/upphoneload_btpaizhao"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:text="本地上传"
+        android:textColor="#fff"
+        android:background="@drawable/button_selector1"
+        android:id="@+id/upphoneload_btbendishangchuan"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_marginLeft="40dp"
+                   android:layout_marginRight="30dp"
+
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:text="上传到相册"
+        android:textColor="#fff"
+        android:background="@drawable/button_selector1"
+        android:id="@+id/upphoneload_btshangchuandaoxiangce"
+        android:layout_gravity="center_horizontal" />
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\Android_PracticalTraining_BigOne\\D_YouYuan\\simpledemo\\build\\intermediates\\res\\merged\\debug\\layout-v11\\abc_action_bar_decor.xml",
+        "source": "D:\\Android_PracticalTraining_BigOne\\D_YouYuan\\simpledemo\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\20.0.0\\res\\layout-v11\\abc_action_bar_decor.xml"
+    },
+    {
+        "merged": "D:\\Android_PracticalTraining_BigOne\\D_YouYuan\\simpledemo\\build\\intermediates\\res\\merged\\debug\\layout-v11\\abc_simple_decor.xml",
+        "source": "D:\\Android_PracticalTraining_BigOne\\D_YouYuan\\simpledemo\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\20.0.0\\res\\layout-v11\\abc_simple_decor.xml"
+    }
+]
